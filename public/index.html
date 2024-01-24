@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Songbird Playlist Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="main-header">
+    <h1 class="main-title">Songbird</h1>
+  </header>
+
+  <main class="content">
+    <form id="playlistForm" class="song-form">
+     
+
+      <label for="createPlaylist" class="form-label">Create Playlist:</label>
+      <!-- <input type="text" id="createPlaylist" name="createPlaylist" class="form-input" required> -->
+
+     
+
+      <input type="text" id="newPlaylistName" name="newPlaylistName" class="form-input" placeholder="New Playlist Name">
+
+      
+      <button type="button" id="createPlaylist" class="form-button">Create Playlist</button>
+    </form>
+<form id="songForm" class="song-form">
+  <label for="title" class="form-label">Title:</label>
+  <input type="text" id="title" name="title" class="form-input" required>
+
+  <label for="artist" class="form-label">Artist:</label>
+  <input type="text" id="artist" name="artist" class="form-input" required>
+  <label for="playlist" class="form-label">Select Playlist:</label>
+  <select id="playlist" name="playlist" class="form-input" required>
+    <option value="existing">Add to Existing Playlist</option>
+  </select> 
+  <button type="button" id="addSong" class="form-button">Add Song</button>
+</form>
+    <div class="playlist-container" id="playlists">
+    </div>
+
+    <div id="songs" class="song-container">
+    </div>
+  </main>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
